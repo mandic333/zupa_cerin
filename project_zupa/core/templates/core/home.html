@@ -1,0 +1,296 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% comment %}
+		<!-- Global site tag (gtag.js) - Google Analytics
+		{% load google_analytics_tags %} 
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-8YML1SWSC0"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-8YML1SWSC0');
+		</script>
+		-->
+		{% endcomment %}
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Župa Čerin</title>
+
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+		<link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+		<link type="text/css" rel="stylesheet" href="{% static 'css/animate.css' %}"/>
+		<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+    </head>
+
+	<body>
+
+		<!-- Header -->
+		<header id="header" class="transparent-nav">
+			<div class="container">
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a href="{% url 'home' %}">
+							<h1 class="white-text">Župa Čerin</h1>
+						</a>
+					</div>
+					<!-- /Logo -->
+
+					<!-- Mobile toggle -->
+					<button class="navbar-toggle" style="background-color: #fff;">
+						<span></span>
+					</button>
+					<!-- /Mobile toggle -->
+				</div>
+
+				<nav id="nav">
+					<ul class="main-menu nav navbar-nav navbar-right">
+						<li><a href="{% url 'home' %}">Home</a></li>
+						<li><a href="{% url 'glasnici' %}">Glasnik sv. Stjepana</a></li>
+						<li><a href="{% url 'vijesti' %}">Vijesti</a></li>
+						<li><a href="{% url 'povijest' %}">O župi</a></li>
+						<li><a href="{% url 'kontakt' %}">Kontakt</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div id="home" class="hero-area">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./static/img/spomenik_braniteljima_predvecer.jpeg)"></div>
+			<!-- /Backgound Image -->
+
+			<div class="home-wrapper">
+				<div class="container">
+					<div class="row">
+						<h1 class="white-text">Župa svetog Stjepana Prvomučenika Čerin</h1>
+						<p class="lead white-text animate__animated animate__fadeInUp">Osnovana 1864</p>
+						<div class="center-btn">
+							<a class="main-button icon-button animate__animated animate__fadeInLeft animate__delay-1s" href="{% url 'povijest' %}">Povijest župe</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="about" class="section">
+
+			<div class="container">
+
+				<div class="row">
+
+
+					<div class="section-header text-center">
+						<h1>Dobrodošli</h1>
+						<p class="lead">Službene stranice župe.</p>
+					</div>
+
+					<div class="col-md-6 text-center wow animate__animated animate__fadeInUp" style="border-style: solid;">	
+						<h3>fra Hrvoje Miletić, župnik</h3>
+						<p>Rođen 1975.</p>
+					</div>
+
+					<div class="col-md-6 text-center wow animate__animated animate__fadeInUp" style="border-style: solid;">
+						<h3>fra Jure Barišić, kapelan</h3>
+						<p>Rođen 1979.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Glasnik -->
+		<div id="glasnik" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="section-header text-center">
+						<h2>Župne obavijesti</h2>
+						<p class="lead">Naš dvotjedni glasnik svetog Stjepana Prvomučenika</p>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="center-btn">
+						<a class="main-button icon-button" href="{% url 'glasnici' %}">Više glasnika</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="cta" class="section">
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./static/img/cta1-background.jpg)"></div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<h2 class="white-text">Pratite nas i na Facebooku</h2>
+						<div class="center-btn">
+							<a class="main-button icon-button wow animate__animated animate__jackInTheBox" href="https://www.facebook.com/zupa.cerin">FACEBOOK</a>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="why-us" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="section-header text-center wow animate__animated animate__fadeInUp">
+						<h2>Raspored svetih misa</h2>
+					</div>
+					
+					<div class="col-md-4 wow animate__animated animate__fadeInUp">
+						<h3>Sv. Mise kroz tjedan:</h3>
+						<ul>
+							<li>Jutarnje sv.Mise u 7 sati</li>
+							<li>Večernje sv.Mise utorkom i četvrtkom u 19 sati</li>
+							<li>Klanjanje Presvetom Oltarskom sakramentu je svakog četvrtka u župnoj crkvi
+							 u 19,30  sati nakon večernje sv. Mise.</li>
+							<li>Sv. Krunica i sv. Ispovijed u 18,30 sati.</li>
+						</ul>				
+					</div>
+
+					<div class="col-md-4 wow animate__animated animate__fadeInUp">
+						<h3>Raspored nedjeljnih sv. Misa:</h3>
+						<ul>
+							<li>Čerin 8 i 11 sati</li>
+							<li>Donja Blatnica 9:30 sati</li>
+							<li>Donji Mali Ograđenik 9 sati</li>
+							<li>Donji Veliki Ograđenik 10:30 sati</li>
+							<li>Svake prve nedjelje u mjesecu u 19:00</li>
+						</ul>				
+					</div>						
+
+					<div class="col-md-4 wow animate__animated animate__fadeInUp">
+						<h3>Pobožnosti u župi:</h3>
+						<ul>
+							<li>Pobožnost prvih petaka:</li>
+							<li>Donja Blatnica, sv. Ispovijed i sv. Misa u 8 sati</li>
+							<li>Pobožnost prvih subota:</li>
+							<li>Donji Veliki Ograđenik, sv. Ispovijed i sv. Misa u 8 sati.</li>
+							<li>Priliku za sv. Ispovijed imate prije svih Misa u svim crkvama</li>
+						</ul>		
+					</div>
+				</div>
+						
+				<hr class="section-hr">	
+
+					
+				<div class="container">
+					<div class="row">
+						<h1 class="section-header text-center wow animate__animated animate__fadeInUp">Naše filijale</h1>
+						
+						<div class="col-md-4 wow animate__animated animate__fadeInUp text-center">
+							<div class="feature">
+								<img c src="{% static 'img/donji_mali.jpg' %}" alt="Donji Mali Ograđenik" class="img-responsive">								
+							</div>
+							<i>Donji Mali Ograđenik</i>
+						</div>
+
+						<div class="col-md-4 wow animate__animated animate__fadeInUp text-center">
+							<div class="feature">
+								<img src="{% static 'img/blatnica.jpg' %}" alt="Donja Blatnica" class="img-responsive">
+							</div>
+							<i>Donja Blatnica</i>
+						</div>
+
+						<div class="col-md-4 wow animate__animated animate__fadeInUp text-center">
+							<div class="feature">
+								<img src="{% static 'img/donji_veliki.jpg' %}" alt="Donji Veliki Ograđenik" class="img-responsive">
+							</div>
+							<i>Donji Veliki Ograđenik</i>
+						</div>
+					</div>		
+				</div>
+
+			</div>
+		</div>
+
+		<div id="contact-cta" class="section">
+
+			<div class="bg-image bg-parallax overlay" style="background-image:url(./static/img/cta2-background.jpg)"></div>
+	
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center">
+						<h2 class="white-text">Za bilo kakva pitanja</h2>
+						<a class="main-button icon-button" href="{% url 'kontakt' %}">Kontakt</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<footer id="footer" class="section">
+
+			<div class="container">
+
+				<div class="row wow animate__animated animate__fadeInUp">
+
+					<div class="col-md-6">
+						<div class="footer-logo">
+
+							<a href="{% url 'home' %}">
+								<h1>Župa Čerin</h1>
+							</a>
+							
+						</div>
+					</div>
+					<div class="col-md-6">
+						<ul class="footer-nav">
+							<li><a href="{% url 'home' %}">Home</a></li>
+							<li><a href="{% url 'glasnici' %}">Glasnik sv. Stjepana</a></li>
+							<li><a href="{% url 'vijesti' %}">Vijesti</a></li>
+							<li><a href="{% url 'povijest' %}">O župi</a></li>
+							<li><a href="{% url 'kontakt' %}">Kontakt</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div id="bottom-footer" class="row">
+					<div class="col-md-2 col-md-push-8">
+						<ul class="footer-social">
+							<li><a href="https://www.facebook.com/zupa.cerin" class="facebook"><i class="fa fa-facebook"></i></a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-8 col-md-pull-4">
+						<div class="footer-copyright wow animate__animated animate__fadeInLeft animate__delay-1s">
+							<span>&copy; 2021. Powered by AMTECH</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</footer>
+
+
+		<div id='preloader'>
+			<div class='preloader'></div>
+		</div>
+
+
+		<!-- Javascript Plugins -->
+		<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
+		<script>
+			new WOW().init();
+		</script>		
+	</body>
+</html>

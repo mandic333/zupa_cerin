@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="hero-area section">
+
+	<!-- Backgound Image -->
+	<div class="bg-image bg-parallax overlay" style="background-image:url(../static/img/iz_vinograda.jpeg)"></div>
+	<!-- /Backgound Image -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 text-center">
+				<h1 class="white-text wow animate__animated animate__fadeInUp animate__delay-1s">Glasnik svetog Stjepana Prvomučenika</h1>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div id="glasnik-wrapper">
+	<div class="container">
+		<div id="glasnik">
+			<div class="row">
+				{% for glasnik in object_list %}
+
+					<div class="col-md-4 col-sm-6 col-xs-6">
+						<div class="glasnik wow animate__animated animate__fadeInUp">									
+							<a href="{{ glasnik.datoteka.url }}">
+								<img  class="img-responsive" src="{{ glasnik.slika.url }}">																														
+								<h5 class="glasnik-title text-center" >{{ glasnik.naziv }}{{ glasnik.broj }}</h5>								
+							</a>
+						</div>
+					</div>
+
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}

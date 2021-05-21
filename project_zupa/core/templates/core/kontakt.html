@@ -1,0 +1,70 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="hero-area section">
+
+	<!-- Backgound Image -->
+	<div class="bg-image bg-parallax overlay" style="background-image:url(../static/img/cta2-background.jpg)"></div>
+	<!-- /Backgound Image -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 text-center">
+				<h1 class="white-text wow animate__animated animate__fadeInUp animate__delay-1s">Kontaktirajte nas</h1>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="contact" class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 wow animate__animated animate__fadeInLeft animate__delay-1s">
+				<div class="contact-form">
+
+					<h4>Pošaljite poruku</h4>
+
+					{% csrf_token %}
+
+					<form action="{% url 'home' %}" method="post">
+						
+						{% csrf_token %}
+
+						{{ form }}
+
+						<input class="main-button icon-button pull-right" type="submit" value="Submit">
+
+					</form>
+
+				</div>
+			</div>
+
+
+			<div class="col-md-5 col-md-offset-1 wow animate__animated animate__fadeInUp animate__delay-1s">
+				<h4>Contact Information</h4>
+				
+					<ul class="contact-details">
+						<li><i class="fa fa-envelope"></i>zupa.cerin@gmail.com</li>
+						<li><i class="fa fa-envelope"></i>admin@zupacerin.info</li>
+						<li><i class="fa fa-phone"></i>Tel.: 036 652 139</li>
+						<li><i class="fa fa-phone"></i>Fax: 036 652 592</li>
+						<li><i class="fa fa-map-marker"></i>Čerin bb, 88265 Čerin</li>
+					</ul>
+
+				<!-- contact map -->
+				<div id="contact-map">
+					<iframe src="https://snazzymaps.com/embed/310379" width="100%" height="300px" style="border:none;"></iframe>
+				</div>
+				<!-- /contact map -->
+
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock content %}
